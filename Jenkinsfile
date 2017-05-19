@@ -52,7 +52,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('https://index.docker.io/v1/','wolf685cln') {
+        docker.withRegistry('https://hub.docker.com/r/wolf685cln/acme/','wolf685cln') {
             dockerImage.push 'latest'
         }
     }
