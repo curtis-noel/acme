@@ -1,0 +1,14 @@
+version: '2'
+services:
+    acme-app:
+        image: acme
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://acme-postgresql:5432/acme
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    acme-postgresql:
+        extends:
+            file: postgresql.yml
+            service: acme-postgresql
