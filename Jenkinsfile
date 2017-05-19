@@ -48,11 +48,11 @@ node {
     stage('build docker') {
         sh "cp -R src/main/docker build/"
         sh "cp build/libs/*.war build/docker/"
-        dockerImage = docker.build('wolf68cln/acme', 'build/docker')
+        dockerImage = docker.build('wolf685cln/acme', 'build/docker')
     }
 
     stage('publish docker') {
-        docker.withRegistry('https://registry.hub.docker.com', 'wolf685cln') {
+        docker.withRegistry('https://hub.docker.com/r/wolf685cln/acme/', 'wolf685cln') {
             dockerImage.push 'latest'
         }
     }
