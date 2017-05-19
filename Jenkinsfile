@@ -52,7 +52,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('wolf685cln') {
+        docker.withRegistry('https://index.docker.io/v1/','wolf685cln') {
             dockerImage.push 'latest'
         }
     }
