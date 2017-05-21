@@ -13,16 +13,16 @@
     "clusteredHttpSession": false,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "postgresql",
+    "devDatabaseType": "h2Memory",
     "prodDatabaseType": "postgresql",
     "searchEngine": false,
     "messageBroker": false,
     "serviceDiscoveryType": false,
     "buildTool": "gradle",
     "enableSocialSignIn": false,
-    "jwtSecretKey": "ac3013d7f2c9a6a809d5163dfa7433d90165fe6a",
+    "jwtSecretKey": "37fac52675868227c12e2b4ffffe4c876ff0d2b2",
     "clientFramework": "angular2",
-    "useSass": true,
+    "useSass": false,
     "clientPackageManager": "npm",
     "applicationType": "monolith",
     "testFrameworks": [
@@ -31,7 +31,6 @@
       "protractor"
     ],
     "jhiPrefix": "jhi",
-    "otherModules": [],
     "enableTranslation": false
   }
 }

@@ -11,7 +11,7 @@ import { VERSION, DEBUG_INFO_ENABLED } from '../../app.constants';
     selector: 'jhi-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: [
-        'navbar.scss'
+        'navbar.css'
     ]
 })
 export class NavbarComponent implements OnInit {
