@@ -31,8 +31,8 @@ describe('account', () => {
     });
 
     it('should login successfully with admin account', () => {
-        const expect1 = /Sign in/;
-        element.all(by.css('.modal-content h1')).first().getText().then((value) => {
+        const expect1 = /Login/;
+        element.all(by.css('.modal-content label')).first().getText().then((value) => {
             expect(value).toMatch(expect1);
         });
         username.clear();

@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "net.curtisnoel"
     },
-    "jhipsterVersion": "4.3.0",
+    "jhipsterVersion": "4.5.1",
     "baseName": "acme",
     "packageName": "net.curtisnoel",
     "packageFolder": "net/curtisnoel",
