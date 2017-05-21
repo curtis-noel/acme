@@ -10,12 +10,12 @@ import { AcmeAdminModule } from './admin/admin.module';
 import { AcmeAccountModule } from './account/account.module';
 import { AcmeEntityModule } from './entities/entity.module';
 
-import { LayoutRoutingModule } from './layouts';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
 import {
     JhiMainComponent,
+    LayoutRoutingModule,
     NavbarComponent,
     FooterComponent,
     ProfileService,
