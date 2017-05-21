@@ -20,7 +20,7 @@ bootRun {
     args = []
 }
 
-task webpackBuildDev(type: YarnTask) {
+task webpackBuildDev(type: NpmTask) {
     args = ["run", "webpack:build:dev"]
 }
 

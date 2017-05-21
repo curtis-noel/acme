@@ -6,6 +6,7 @@ import {
     AcmeSharedLibsModule,
     AcmeSharedCommonModule,
     CSRFService,
+    AuthService,
     AuthServerProvider,
     AccountService,
     UserService,
@@ -35,6 +36,7 @@ import {
         Principal,
         CSRFService,
         AuthServerProvider,
+        AuthService,
         UserService,
         DatePipe
     ],

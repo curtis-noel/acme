@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 
+import { AuthService } from '../';
 import { Principal } from '../';
 import { LoginModalService } from '../login/login-modal.service';
 import { StateStorageService } from './state-storage.service';
@@ -28,16 +29,13 @@ export class UserRouteAccessService implements CanActivate {
         const principal = this.principal;
         return Promise.resolve(principal.identity().then((account) => {
 
-            if (account && principal.hasAnyAuthorityDirect(authorities)) {
+            if (account && principal.hasAnyAuthority(authorities)) {
                 return true;
             }
 
             this.stateStorageService.storeUrl(url);
             this.router.navigate(['accessdenied']).then(() => {
-                // only show the login dialog, if the user hasn't logged in yet
-                if (!account) {
-                    this.loginModalService.open();
-                }
+                this.loginModalService.open();
             });
             return false;
         }));

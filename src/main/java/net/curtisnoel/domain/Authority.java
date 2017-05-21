@@ -45,7 +45,11 @@ public class Authority implements Serializable {
 
         Authority authority = (Authority) o;
 
-        return !(name != null ? !name.equals(authority.name) : authority.name != null);
+        if (name != null ? !name.equals(authority.name) : authority.name != null) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override

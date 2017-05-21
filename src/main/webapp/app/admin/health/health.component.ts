@@ -6,7 +6,7 @@ import { JhiHealthModalComponent } from './health-modal.component';
 
 @Component({
     selector: 'jhi-health',
-    templateUrl: './health.component.html'
+    templateUrl: './health.component.html',
 })
 export class JhiHealthCheckComponent implements OnInit {
     healthData: any;
@@ -16,8 +16,7 @@ export class JhiHealthCheckComponent implements OnInit {
         private modalService: NgbModal,
         private healthService: JhiHealthService
     ) {
-
-    }
+        }
 
     ngOnInit() {
         this.refresh();

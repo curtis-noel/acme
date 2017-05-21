@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "net.curtisnoel"
     },
-    "jhipsterVersion": "4.5.1",
+    "jhipsterVersion": "4.3.0",
     "baseName": "acme",
     "packageName": "net.curtisnoel",
     "packageFolder": "net/curtisnoel",
@@ -13,17 +13,17 @@
     "clusteredHttpSession": false,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "h2Memory",
+    "devDatabaseType": "postgresql",
     "prodDatabaseType": "postgresql",
     "searchEngine": false,
     "messageBroker": false,
     "serviceDiscoveryType": false,
     "buildTool": "gradle",
     "enableSocialSignIn": false,
-    "jwtSecretKey": "60487c2a9d7ba843fd4a2dddf245158cd8f24b56",
+    "jwtSecretKey": "ac3013d7f2c9a6a809d5163dfa7433d90165fe6a",
     "clientFramework": "angular2",
     "useSass": true,
-    "clientPackageManager": "yarn",
+    "clientPackageManager": "npm",
     "applicationType": "monolith",
     "testFrameworks": [
       "gatling",
@@ -31,6 +31,7 @@
       "protractor"
     ],
     "jhiPrefix": "jhi",
+    "otherModules": [],
     "enableTranslation": false
   }
 }

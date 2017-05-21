@@ -14,8 +14,7 @@ export class JhiMainComponent implements OnInit {
         private titleService: Title,
         private router: Router,
         private $storageService: StateStorageService,
-    ) {
-    }
+    ) {}
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
         let title: string = (routeSnapshot.data && routeSnapshot.data['pageTitle']) ? routeSnapshot.data['pageTitle'] : 'acmeApp';
@@ -28,7 +27,7 @@ export class JhiMainComponent implements OnInit {
     ngOnInit() {
         this.router.events.subscribe((event) => {
             if (event instanceof NavigationEnd) {
-                this.titleService.setTitle(this.getPageTitle(this.router.routerState.snapshot.root));
+                 this.titleService.setTitle(this.getPageTitle(this.router.routerState.snapshot.root));
             }
         });
     }

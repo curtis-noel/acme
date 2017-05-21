@@ -20,21 +20,17 @@ export class Principal {
     }
 
     hasAnyAuthority(authorities: string[]): Promise<boolean> {
-        return Promise.resolve(this.hasAnyAuthorityDirect(authorities));
-    }
-
-    hasAnyAuthorityDirect(authorities: string[]): boolean {
         if (!this.authenticated || !this.userIdentity || !this.userIdentity.authorities) {
-            return false;
+            return Promise.resolve(false);
         }
 
         for (let i = 0; i < authorities.length; i++) {
             if (this.userIdentity.authorities.indexOf(authorities[i]) !== -1) {
-                return true;
+                return Promise.resolve(true);
             }
         }
 
-        return false;
+        return Promise.resolve(false);
     }
 
     hasAuthority(authority: string): Promise<boolean> {
